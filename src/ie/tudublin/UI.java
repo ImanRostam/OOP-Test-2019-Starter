@@ -46,7 +46,8 @@ public class UI extends PApplet
 	// 	Table table = loadTable("resistors.csv", "header");
 	// 	for(TableRow row: table.rows())
 	// 	{
-	// 		Resistor resistor = new Resistor(value, ones, tens, hundreds);
+	// 		Resistor resistor = new Resistor(value);
+	// 		Resistor.add(resistor);
 	// 	}
 	// }
 
@@ -60,32 +61,24 @@ public class UI extends PApplet
 
 	// public Color findColor(int value)
 	// {
-
+		 
 	// }
 
 	public void setup() 
 	{
+		resistor.add(new Resistor(12));
+
 		//loadColours();
 		//loadResistors();
 		toString();
 		printColour();
 	}
-	
-	int space = 100;
-	int length = 0;
 
 	public void draw()
-	{		
-		// Boxes
-		noFill();
-		for(int i = 0; i < 4; i++)
+	{	
+		for(Resistor re: resistor)
 		{
-			rect(200, 0 + space, 100, 100);
-			space = space + 110;
-		}	
-
-		// Lines
-		fill(colour.r, colour.g, colour.b);
-
+			re.render();
+		}
 	}
 }
