@@ -10,6 +10,11 @@ public class Colour extends PApplet
     public int b;
     public int value;
     
+    public String toString()
+    {
+        return colour + "\t" + r + "\t" + g + "\t" + b + "\t" + value;
+         
+    }
     /**
 	 * @return the colour
 	 */
