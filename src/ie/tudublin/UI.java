@@ -74,11 +74,23 @@ public class UI extends PApplet
 		printColour();
 	}
 
+	
+	// int space = 100;
+	// int length = 0;
+
 	public void draw()
 	{	
 		for(Resistor re: resistor)
 		{
 			re.render();
 		}
+
+        // Boxes
+		// noFill();
+		// for(int i = 0; i < 4; i++)
+		// {
+		// 	rect(200, 0 + space, 100, 100);
+		// 	space = space + 110;
+		// }	
 	}
 }
