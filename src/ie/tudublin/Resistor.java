@@ -27,8 +27,5 @@ public class Resistor extends UI
 			rect(200, 0 + space, 100, 100);
 			space = space + 110;
 		}	
-
-		// Lines
-
     }
 }

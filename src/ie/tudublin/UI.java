@@ -31,25 +31,25 @@ public class UI extends PApplet
 		separate(92);
 	}
 
-	// public void loadColours()
-	// {
-	// 	Table table = loadTable("colours.csv", "header");
-	// 	for(TableRow row: table.rows())
-	// 	{
-	// 		Colour colour = new Colour(row);
-	// 		colour.add(colour);
-	// 	}	
-	// }
+	public void loadColours()
+	{
+		Table table = loadTable("colours.csv", "header");
+		for(TableRow row: table.rows())
+		{
+			Colour colour = new Colour(row);
+			colour.add(colour);
+		}	
+	}
 
-	// public void loadResistors()
-	// {
-	// 	Table table = loadTable("resistors.csv", "header");
-	// 	for(TableRow row: table.rows())
-	// 	{
-	// 		Resistor resistor = new Resistor(value);
-	// 		Resistor.add(resistor);
-	// 	}
-	// }
+	public void loadResistors()
+	{
+		Table table = loadTable("resistors.csv", "header");
+		for(TableRow row: table.rows())
+		{
+			Resistor resistor = new Resistor(12);
+			System.out.println("Resistor " + resistor + row);
+		}
+	}
 
 	public void printColour()
 	{
@@ -59,17 +59,17 @@ public class UI extends PApplet
 		}
 	}
 
-	// public Color findColor(int value)
-	// {
+	public Color findColor(int value)
+	{
 		 
-	// }
+	}
 
 	public void setup() 
 	{
 		resistor.add(new Resistor(12));
 
-		//loadColours();
-		//loadResistors();
+		loadColours();
+		loadResistors();
 		toString();
 		printColour();
 	}
