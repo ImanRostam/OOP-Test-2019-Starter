@@ -1,5 +1,6 @@
 package ie.tudublin;
 
+import processing.data.TableRow;
 import processing.core.PApplet;
 
 public class Colour extends PApplet
@@ -10,10 +11,14 @@ public class Colour extends PApplet
     public int b;
     public int value;
     
+    public Colour(TableRow row)
+    {
+        colour = row.getString("colour");   
+    }
     public String toString()
     {
         return colour + "\t" + r + "\t" + g + "\t" + b + "\t" + value;
-         
+
     }
     /**
 	 * @return the colour
