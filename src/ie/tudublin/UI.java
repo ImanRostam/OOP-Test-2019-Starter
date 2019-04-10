@@ -71,17 +71,21 @@ public class UI extends PApplet
 		printColour();
 	}
 	
-	// int spaceAbove = 50;
-	int spaceSide = 200;
-	int otherBox = 50;
+	int space = 100;
+	int length = 0;
 
 	public void draw()
 	{		
-		fill(180);
-		for(int i = 50; i < 200; i = i + 50)
+		// Boxes
+		noFill();
+		for(int i = 0; i < 4; i++)
 		{
-			rect(spaceSide, i + otherBox, 100, 100);
-			otherBox = i + 100;
+			rect(200, 0 + space, 100, 100);
+			space = space + 110;
 		}	
+
+		// Lines
+		fill(colour.r, colour.g, colour.b);
+
 	}
 }

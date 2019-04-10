@@ -13,6 +13,5 @@ public class Resistor
         this.ones = value - ((hundreds * 100) + (tens * 10));
         this.tens = (value - (hundreds * 100)) / 10;
         this.hundreds = (value / 100);
-        
     }
 }
