@@ -13,13 +13,20 @@ public class Colour extends PApplet
     
     public Colour(TableRow row)
     {
-        colour = row.getString("colour");   
+        this.colour = row.getString("colour");   
     }
+
+    public Colour(String colour, int r, int g, int b, int value)
+    {
+        this.colour = colour;
+    }
+
     public String toString()
     {
         return colour + "\t" + r + "\t" + g + "\t" + b + "\t" + value;
 
     }
+
     /**
 	 * @return the colour
 	 */
