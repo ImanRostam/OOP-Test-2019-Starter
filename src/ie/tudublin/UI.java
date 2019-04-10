@@ -10,6 +10,7 @@ import processing.data.TableRow;
 public class UI extends PApplet
 {	
 	ArrayList<Colour> colour = new ArrayList<Colour>();
+	ArrayList<Resistor> resistor = new ArrayList<Resistor>();
 
 	public void separate(int value)
 	{
@@ -30,15 +31,24 @@ public class UI extends PApplet
 		separate(92);
 	}
 
-	public void loadColours()
-	{
-		Table table = loadTable("colours.csv", "header");
-		for(TableRow row: table.rows())
-		{
-			Colour colour = new Colour(row);
-			colour.add(colour);
-		}	
-	}
+	// public void loadColours()
+	// {
+	// 	Table table = loadTable("colours.csv", "header");
+	// 	for(TableRow row: table.rows())
+	// 	{
+	// 		Colour colour = new Colour(row);
+	// 		colour.add(colour);
+	// 	}	
+	// }
+
+	// public void loadResistors()
+	// {
+	// 	Table table = loadTable("resistors.csv", "header");
+	// 	for(TableRow row: table.rows())
+	// 	{
+	// 		Resistor resistor = new Resistor(value, ones, tens, hundreds);
+	// 	}
+	// }
 
 	public void printColour()
 	{
@@ -48,19 +58,30 @@ public class UI extends PApplet
 		}
 	}
 
-	public Color findColor(int value)
-	{
-		
-	}
+	// public Color findColor(int value)
+	// {
+
+	// }
 
 	public void setup() 
 	{
-		loadColours();
+		//loadColours();
+		//loadResistors();
 		toString();
 		printColour();
 	}
 	
+	// int spaceAbove = 50;
+	int spaceSide = 200;
+	int otherBox = 50;
+
 	public void draw()
-	{			
+	{		
+		fill(180);
+		for(int i = 50; i < 200; i = i + 50)
+		{
+			rect(spaceSide, i + otherBox, 100, 100);
+			otherBox = i + 100;
+		}	
 	}
 }
